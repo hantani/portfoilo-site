@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   CardsContainer,
   Wrapper,
@@ -9,17 +9,10 @@ import {
   Text,
 } from "./styles";
 import { Link } from "react-router-dom";
+import InfoesContext from "../../stores/InfoesContext";
 
 const Main = () => {
-  const cardInfoes = [
-    {
-      url: "/portfolio-site",
-      thumbnail: "imgs/thumb-01.png",
-      title: "포트폴리오 사이트",
-      text: "리액트 컴포넌트 개발 경험을 쌓기 위해 제작하였습니다",
-      tags: ["#React", "#styled-component", "#반응형"],
-    },
-  ];
+  const cardInfoes = useContext(InfoesContext);
 
   return (
     <Wrapper>
