@@ -8,6 +8,7 @@ import { GlobalStyle } from "./style/GlobalStyle";
 import Navigation from "@components/Navigation";
 import ToggleBtn from "@components/ToggleBtn";
 import PortfolioSite from "./pages/PortfolioSite";
+import Blog from "@pages/Blog";
 
 export const ThemeContext = createContext();
 

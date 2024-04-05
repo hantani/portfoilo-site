@@ -25,4 +25,9 @@ export const Btn = styled.button`
   right: 60px;
   border-radius: 50%;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+
+  @media only screen and (max-width: 1360px) {
+    bottom: 20px;
+    right: 20px;
+  }
 `;

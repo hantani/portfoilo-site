@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.section`
   border-bottom: 1px solid ${({ theme }) => theme.borderColor};
+  position: relative;
 
   &.fixed {
     position: fixed;
@@ -13,6 +14,12 @@ export const Wrapper = styled.section`
 
     Header {
       padding: 10px 0;
+
+      @media only screen and (max-width: 1360px) {
+        margin: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
     }
 
     .topLogo {
@@ -24,7 +31,7 @@ export const Wrapper = styled.section`
       font-size: 16px;
 
       &::after {
-        bottom: -25px;
+        bottom: -27px;
       }
     }
   }
@@ -34,6 +41,19 @@ export const Header = styled.header`
   max-width: 1280px;
   margin: 0 auto;
   padding: 15px 0;
+
+  @media only screen and (max-width: 1360px) {
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 
 export const LeftSection = styled.div`
@@ -50,10 +70,27 @@ export const LeftSection = styled.div`
       width: 100%;
       height: 100%;
     }
+
+    @media only screen and (max-width: 767px) {
+      width: 60px;
+      height: 57px;
+    }
   }
 `;
 
-export const RightSection = styled.div``;
+export const RightSection = styled.div`
+  display: none;
+
+  > button {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+  }
+
+  @media only screen and (max-width: 767px) {
+    display: inline-block;
+  }
+`;
 
 export const NavLinks = styled.div`
   > ul {
@@ -103,5 +140,9 @@ export const NavLinks = styled.div`
     &::after {
       display: inline-block;
     }
+  }
+
+  @media only screen and (max-width: 767px) {
+    display: none;
   }
 `;

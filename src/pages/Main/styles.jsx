@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.section`
-  min-height: calc(100vh - 109px);
-`;
+export const Wrapper = styled.section``;
 
 export const CardsContainer = styled.div`
   max-width: 1280px;
@@ -12,8 +10,29 @@ export const CardsContainer = styled.div`
   flex-wrap: wrap;
   gap: 50px;
 
+  @media only screen and (max-width: 1360px) {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding-top: 40px;
+    gap: 0;
+  }
+
   > a {
     width: calc(50% - 25px);
+
+    @media only screen and (max-width: 1360px) {
+      width: calc(50% - 10px);
+    }
+
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
   }
 `;
 
@@ -47,6 +66,7 @@ export const TextWrapper = styled.div`
     display: flex;
     margin-top: 10px;
     gap: 10px;
+    flex-wrap: wrap;
 
     li {
       border-radius: 20px;
@@ -67,4 +87,10 @@ export const Text = styled.p`
   line-height: 1.5;
   color: ${({ theme }) => theme.fontSubColor};
   margin-top: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 `;

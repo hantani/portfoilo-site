@@ -1,8 +1,14 @@
-import React, { useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Wrapper, Header, LeftSection, NavLinks, RightSection } from "./styles";
 import { NavLink, Link } from "react-router-dom";
+import Hamburger from "hamburger-react";
+import HamburgerMenu from "@components/HamburgerMenu";
+
+export const github = "https://github.com/hantani";
+export const blog = "https://velog.io/@hantani17/posts";
 
 const Navigation = ({ theme }) => {
+  const [isOpen, setOpen] = useState(false);
   const navRef = useRef();
   useEffect(() => {
     const $wrapper = navRef.current;
@@ -42,12 +48,23 @@ const Navigation = ({ theme }) => {
                 </NavLink>
               </li>
               <li>
-                <button>깃허브</button>
+                <button className="topLink" onClick={() => window.open(blog)}>
+                  블로그
+                </button>
+              </li>
+              <li>
+                <button className="topLink" onClick={() => window.open(github)}>
+                  깃허브
+                </button>
               </li>
             </ul>
           </NavLinks>
         </LeftSection>
+        <RightSection>
+          <Hamburger toggled={isOpen} toggle={setOpen} />
+        </RightSection>
       </Header>
+      <HamburgerMenu isOpen={isOpen} theme={theme}></HamburgerMenu>
     </Wrapper>
   );
 };
