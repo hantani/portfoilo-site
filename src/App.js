@@ -10,25 +10,29 @@ import ToggleBtn from "@components/ToggleBtn";
 import PortfolioSite from "./pages/PortfolioSite";
 
 export const ThemeContext = createContext();
-let tempTheme;
 
 function App() {
-  if (localStorage.getItem("theme")) {
-    tempTheme = localStorage.getItem("theme");
-  }
-  const [theme, setTheme] = useState(tempTheme);
+  const [theme, setTheme] = useState("light");
   useEffect(() => {
     if (!localStorage.getItem("theme")) {
       localStorage.setItem("theme", "light");
+    }
+    if (localStorage.getItem("theme")) {
+      setTheme(localStorage.getItem("theme"));
     }
   }, [theme]);
 
   return (
     <BrowserRouter>
-      <ThemeContext.Provider value={theme}>
+      <ThemeContext.Provider
+        value={{
+          theme,
+          setTheme,
+        }}
+      >
         <ThemeProvider theme={theme === "light" ? light : dark}>
           <GlobalStyle />
-          <Navigation></Navigation>
+          <Navigation theme={theme}></Navigation>
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/about" element={<About />} />

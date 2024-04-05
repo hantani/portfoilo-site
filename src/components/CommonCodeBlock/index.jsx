@@ -15,8 +15,8 @@ const Wrapper = styled.div`
 const CommonCodeBlock = ({ text }) => {
   return (
     <ThemeContext.Consumer>
-      {(value) => {
-        if (value === "light") {
+      {({ theme }) => {
+        if (theme === "light") {
           return (
             <Wrapper>
               <CodeBlock
@@ -27,7 +27,7 @@ const CommonCodeBlock = ({ text }) => {
               />
             </Wrapper>
           );
-        } else if (value === "dark") {
+        } else if (theme === "dark") {
           return (
             <Wrapper>
               <CodeBlock

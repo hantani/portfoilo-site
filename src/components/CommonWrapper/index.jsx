@@ -3,7 +3,11 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   max-width: 1280px;
-  margin: 50px auto;
+  margin: 70px auto;
+
+  &:first-child {
+    margin-top: 50px;
+  }
 `;
 
 const CommonWrapper = ({ children }) => {

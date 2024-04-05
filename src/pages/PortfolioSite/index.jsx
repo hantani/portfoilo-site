@@ -26,15 +26,35 @@ const PortfolioSite = () => {
     <>
       <TopDesc cardInfo={cardInfoes[0]}></TopDesc>
       <Learn></Learn>
-      <CommonWrapper>
-        <CommonTitle>Styled-component를 활용한 다크모드 기능</CommonTitle>
-        <CommonSub>
-          다크모드 기능을 넣기 위해 styled-component, storage를 활용했습니다.
-          <br />
-          우선 칼라를 맞춰놓았습니다.
-        </CommonSub>
-        <CommonCodeBlock text={codes[0]} />
-      </CommonWrapper>
+      <div>
+        <CommonWrapper>
+          <CommonTitle>Styled-component를 활용한 다크모드 기능</CommonTitle>
+          <CommonSub>
+            다크모드 기능을 넣기 위해 styled-component, storage를 활용했습니다.
+            <br />
+            우선 칼라를 맞춰놓았습니다.
+          </CommonSub>
+          <CommonCodeBlock text={codes[0]} />
+        </CommonWrapper>
+        <CommonWrapper>
+          <CommonTitle>Styled-component를 활용한 다크모드 기능</CommonTitle>
+          <CommonSub>
+            다크모드 기능을 넣기 위해 styled-component, storage를 활용했습니다.
+            <br />
+            우선 칼라를 맞춰놓았습니다.
+          </CommonSub>
+          <CommonCodeBlock text={codes[0]} />
+        </CommonWrapper>
+        <CommonWrapper>
+          <CommonTitle>Styled-component를 활용한 다크모드 기능</CommonTitle>
+          <CommonSub>
+            다크모드 기능을 넣기 위해 styled-component, storage를 활용했습니다.
+            <br />
+            우선 칼라를 맞춰놓았습니다.
+          </CommonSub>
+          <CommonCodeBlock text={codes[0]} />
+        </CommonWrapper>
+      </div>
     </>
   );
 };
