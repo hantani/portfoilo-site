@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
   padding: 20px;
   transform: translateX(100%);
   transition: all 0.3s;
+  z-index: 50;
 
   &.on {
     transform: translateX(0);

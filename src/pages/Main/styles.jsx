@@ -41,6 +41,7 @@ export const Card = styled.div`
   border-radius: 10px;
   border: 1px solid ${({ theme }) => theme.borderColor02};
   transition: all 0.3s;
+  will-change: transform;
 
   &:hover {
     box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);

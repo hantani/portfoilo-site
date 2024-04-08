@@ -4,6 +4,8 @@ export const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.bg};
   border-bottom: 1px solid ${({ theme }) => theme.borderColor};
   position: relative;
+  will-change: transform;
+  z-index: 50;
 
   &.fixed {
     position: fixed;

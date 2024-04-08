@@ -1,6 +1,5 @@
 import React from "react";
 import CommonTitle from "@components/CommonTitle";
-import CommonWrapper from "@components/CommonWrapper";
 import CommonSub from "@components/CommonSub";
 import styled from "styled-components";
 

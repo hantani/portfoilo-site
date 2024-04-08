@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Btn = styled.button`
   width: 60px;
   height: 60px;
+  will-change: transform;
+  z-index: 50;
   background-color: ${({ theme }) => {
     if (theme.name === "light") {
       return theme.bg;
