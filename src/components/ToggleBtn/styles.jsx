@@ -30,4 +30,10 @@ export const Btn = styled.button`
     bottom: 20px;
     right: 20px;
   }
+
+  @media only screen and (max-width: 767px) {
+    width: 50px;
+    height: 50px;
+    background-size: 28px 28px;
+  }
 `;

@@ -10,6 +10,14 @@ const Wrapper = styled.div`
     color: ${({ theme }) => theme.fontSubColor};
     line-height: 1.5;
   }
+
+  @media only screen and (max-width: 767px) {
+    margin: 20px auto;
+
+    > p {
+      font-size: 16px;
+    }
+  }
 `;
 
 const CommonSub = ({ children }) => {

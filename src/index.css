@@ -161,4 +161,10 @@ table {
   body {
     overflow-x: hidden;
   }
+  html.overflow {
+    overflow: hidden;
+  }
+  body {
+    min-height: 100vh;
+  }
 }

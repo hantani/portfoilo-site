@@ -11,6 +11,13 @@ const Wrapper = styled.div`
     font-size: 32px;
     font-weight: 700;
   }
+
+  @media only screen and (max-width: 767px) {
+    padding-top: 65px;
+    > p {
+      font-size: 30px;
+    }
+  }
 `;
 
 const Learn = () => {

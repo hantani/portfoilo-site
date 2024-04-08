@@ -7,6 +7,11 @@ const Wrapper = styled.div`
   > p {
     font-size: 28px;
     font-weight: 500;
+    line-height: 1.5;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 26px;
+    }
   }
 `;
 

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.section`
+  background-color: ${({ theme }) => theme.bg};
   border-bottom: 1px solid ${({ theme }) => theme.borderColor};
   position: relative;
 

@@ -32,6 +32,25 @@ export const NavLinks = styled.div`
         color: ${({ theme }) => theme.pointTextColor};
         font-size: 20px;
         font-weight: 500;
+        position: relative;
+      }
+
+      > a {
+        &.active {
+          &::after {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: ${({ theme }) => theme.pointTextColor};
+            top: 11px;
+            left: -14px;
+          }
+        }
       }
     }
   }

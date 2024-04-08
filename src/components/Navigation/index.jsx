@@ -64,7 +64,11 @@ const Navigation = ({ theme }) => {
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </RightSection>
       </Header>
-      <HamburgerMenu isOpen={isOpen} theme={theme}></HamburgerMenu>
+      <HamburgerMenu
+        isOpen={isOpen}
+        setOpen={setOpen}
+        theme={theme}
+      ></HamburgerMenu>
     </Wrapper>
   );
 };

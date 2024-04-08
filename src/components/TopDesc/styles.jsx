@@ -7,6 +7,18 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
+
+  @media only screen and (max-width: 1360px) {
+    padding: 0 20px;
+    padding-top: 60px;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 40px;
+  }
 `;
 
 export const Thumbnail = styled.div`
@@ -19,14 +31,27 @@ export const Thumbnail = styled.div`
     height: 100%;
     border-radius: 10px;
   }
+
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+  }
 `;
 
 export const TextWrapper = styled.div`
   width: calc(50% - 25px);
   padding-top: 20px;
 
+  @media only screen and (max-width: 1360px) {
+    padding-top: 0;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+  }
+
   > ul {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 12px;
     gap: 10px;
 
@@ -41,8 +66,12 @@ export const TextWrapper = styled.div`
 `;
 
 export const Title = styled.p`
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 500;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 26px;
+  }
 `;
 
 export const Text = styled.p`
@@ -50,4 +79,8 @@ export const Text = styled.p`
   color: ${({ theme }) => theme.fontSubColor};
   line-height: 1.5;
   margin-top: 20px;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 16px;
+  }
 `;
