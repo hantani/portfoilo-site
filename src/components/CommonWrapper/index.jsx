@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 767px) {
-    margin: 60px auto;
+    margin: 50px auto;
     &:first-child {
       margin-top: 40px;
     }

@@ -1,5 +1,12 @@
 import React from "react";
-import { Wrapper, Thumbnail, TextWrapper, Title, Text } from "./styles";
+import {
+  Wrapper,
+  Thumbnail,
+  TextWrapper,
+  Title,
+  Text,
+  GithubLink,
+} from "./styles";
 
 const TopDesc = ({ cardInfo }) => {
   return (
@@ -15,6 +22,10 @@ const TopDesc = ({ cardInfo }) => {
             return <li key={key}>{tag}</li>;
           })}
         </ul>
+        <GithubLink type="button" onClick={() => window.open(cardInfo.github)}>
+          <div></div>
+          <span>깃헙 바로가기</span>
+        </GithubLink>
       </TextWrapper>
     </Wrapper>
   );

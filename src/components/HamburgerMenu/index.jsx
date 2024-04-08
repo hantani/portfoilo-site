@@ -2,23 +2,22 @@ import React, { useEffect, useRef, useCallback } from "react";
 import { NavLink } from "react-router-dom";
 import { Wrapper, NavLinks } from "./styles";
 import { blog, github } from "@components/Navigation";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 const HamburgerMenu = ({ isOpen, setOpen, theme }) => {
   const hamburgerRef = useRef();
   const onClick = useCallback(() => {
-    const $html = document.querySelector("html");
     hamburgerRef.current.classList.remove("on");
-    $html.classList.remove("overflow");
+    enableBodyScroll(hamburgerRef);
     setOpen(false);
   }, [setOpen]);
   useEffect(() => {
-    const $html = document.querySelector("html");
     if (isOpen) {
       hamburgerRef.current.classList.add("on");
-      $html.classList.add("overflow");
+      disableBodyScroll(hamburgerRef);
     } else {
       hamburgerRef.current.classList.remove("on");
-      $html.classList.remove("overflow");
+      enableBodyScroll(hamburgerRef);
     }
   }, [isOpen, theme]);
 

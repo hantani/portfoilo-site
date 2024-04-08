@@ -161,6 +161,7 @@ table {
   body {
     overflow-x: hidden;
   }
+  body.overflow,
   html.overflow {
     overflow: hidden;
   }

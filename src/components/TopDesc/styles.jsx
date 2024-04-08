@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
 
   @media only screen and (max-width: 767px) {
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     padding-top: 40px;
   }
 `;
@@ -52,7 +52,7 @@ export const TextWrapper = styled.div`
   > ul {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 12px;
+    margin-top: 20px;
     gap: 10px;
 
     li {
@@ -78,9 +78,33 @@ export const Text = styled.p`
   font-size: 18px;
   color: ${({ theme }) => theme.fontSubColor};
   line-height: 1.5;
-  margin-top: 20px;
+  margin-top: 30px;
 
   @media only screen and (max-width: 767px) {
     font-size: 16px;
+  }
+`;
+
+export const GithubLink = styled.button`
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 4px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  > div {
+    width: 24px;
+    height: 24px;
+    background-image: ${({ theme }) => {
+      console.log(theme.name);
+      if (theme.name === "light") {
+        return 'url("imgs/github.png")';
+      } else if (theme.name === "dark") {
+        return 'url("imgs/github-dark.png")';
+      }
+    }};
   }
 `;
