@@ -15,9 +15,9 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 767px) {
-    margin: 50px auto;
+    margin: 60px auto;
     &:first-child {
-      margin-top: 40px;
+      margin-top: 30px;
     }
   }
 `;

@@ -21,7 +21,7 @@ const CommonCodeBlock = ({ text }) => {
             <Wrapper>
               <CodeBlock
                 text={text}
-                language={"javascript"}
+                language={"jsx"}
                 theme={atomOneLight}
                 showLineNumbers={false}
               />
@@ -32,7 +32,7 @@ const CommonCodeBlock = ({ text }) => {
             <Wrapper>
               <CodeBlock
                 text={text}
-                language={"javascript"}
+                language={"jsx"}
                 theme={atomOneDark}
                 showLineNumbers={false}
               />

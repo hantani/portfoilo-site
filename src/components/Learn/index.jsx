@@ -20,10 +20,10 @@ const Wrapper = styled.div`
   }
 `;
 
-const Learn = () => {
+const Learn = ({ children }) => {
   return (
     <Wrapper>
-      <p>What I learned</p>
+      <p>{children}</p>
     </Wrapper>
   );
 };

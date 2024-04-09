@@ -7,18 +7,15 @@ export const Wrapper = styled.div`
   top: 78px;
   background-color: ${({ theme }) => theme.pointSubColor};
   width: 100%;
-  height: calc(100vh - 78px);
   padding: 20px;
-  transform: translateX(100%);
   transition: all 0.3s;
   z-index: 50;
 
   &.on {
-    transform: translateX(0);
+    display: block;
   }
 
   @media only screen and (max-width: 767px) {
-    display: block;
   }
 `;
 
@@ -27,6 +24,10 @@ export const NavLinks = styled.div`
     li {
       text-align: center;
       margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       > a,
       button {
